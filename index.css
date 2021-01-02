@@ -1,0 +1,38 @@
+.hidden {
+    display: none;
+}
+
+img {
+    width: 250px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    width: 350px;
+    text-align: center;
+}
+
+li button {
+    width: 100px;
+}
+
+.resultsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.js-td-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
