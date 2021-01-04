@@ -72,7 +72,8 @@ function getTDByTitle(title) {
 
 function handleTDTitleSubmit() {
     $('.js-bs-list').on('click', '.titleBtn', function(event) {
-        console.log($(this).closest('h2').text());
+        let titleText = $('h2.title').closest().text();
+        console.log(titleText);
     });
 };
 
