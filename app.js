@@ -52,12 +52,10 @@ function getBS(list) {
 
 function getTDByTitle(title) {
 
-    const url = tdSearchURL + title;
+    let url = tdSearchURL + title + "k=" + tdApiKey;
 
-    var formatURL = document.write(url.replace(/ /g, '%20'));
-
-    console.log(formatURL);
-    fetch(formatURL)
+    console.log(url);
+    fetch(url)
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -72,8 +70,8 @@ function getTDByTitle(title) {
 
 function handleTDTitleSubmit() {
     $('.js-bs-list').on('click', '.titleBtn', function(event) {
-        let titleText = $('h2.title').closest().text();
-        console.log(titleText);
+        let titleText = $(this).parent().siblings('h2.title').text();
+        getTDByTitle(titleText);
     });
 };
 
