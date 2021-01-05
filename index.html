@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Need More Books</title>
     <link rel="stylesheet" href="index.css" type="text/css">
 </head>
@@ -86,13 +87,13 @@
 
             </ul>
         </div>
-        <div class="tasteDriveList">
-            <ul class="js-td-list hidden">
+        <div class="js-book-view">
 
-            </ul>
+            <div id="viewerCanvas" class="viewer"></div>
         </div>
     </div>
 
+    <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>

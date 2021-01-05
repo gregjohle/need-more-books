@@ -23,11 +23,18 @@ li button {
     width: 100px;
 }
 
+.viewer {
+    display: block;
+    margin: 0 0 0 3%;
+    height: 60%;
+    width: 100%;
+}
+
 .resultsContainer {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .js-td-buttons {
