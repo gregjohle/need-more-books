@@ -25,9 +25,8 @@ li button {
 
 .viewer {
     display: block;
-    margin: 0 0 0 3%;
-    height: 500px;
     width: 600px;
+    height: 500px;
 }
 
 .resultsContainer {
