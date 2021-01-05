@@ -53,7 +53,6 @@ function alertNotFound() {
 function initialize(bookIsbn) {
     var viewer = new google.books.DefaultViewer(document.getElementById('viewerCanvas'));
     viewer.load(bookIsbn, alertNotFound);
-    //viewer.resize();
 };
 
 // Initializes viewer for selected book
