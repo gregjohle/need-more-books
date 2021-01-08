@@ -2,31 +2,88 @@
     display: none;
 }
 
-img {
-    width: 250px;
+header {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.headerFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    background-color: grey;
+    height: 3em;
+}
+
+.nytControls {
+    padding-top: 1.5em;
+}
+
+main {
+    display: block;
+}
+
+.largeImage {
+    width: 200px;
+}
+
+.smallImage {
+    width: 100px;
 }
 
 ul {
     list-style-type: none;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 77em;
+    overflow-x: auto;
 }
 
 li {
-    width: 350px;
     text-align: center;
+    display: block;
+    max-height: 50em;
+    padding-right: 2em;
+}
+
+li h2 {
+    font-size: 1rem;
+}
+
+li h3 {
+    font-size: .75rem;
+}
+
+li p {
+    font-size: 0.85rem;
 }
 
 li button {
-    width: 100px;
+    width: auto;
 }
 
 .viewer {
     display: block;
-    width: 600px;
-    height: 500px;
+    width: 100%;
+    height: 60%;
+}
+
+.js-hide-viewer {
+    position: relative;
+    top: -23em;
+    left: .5em;
+}
+
+.js-book-viewer {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
 }
 
 .resultsContainer {
@@ -41,4 +98,14 @@ li button {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+}
+
+button {
+    background-color: white;
+    color: darkgreen;
+    border-color: darkgreen;
+    border-width: 0.2rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10%;
 }
