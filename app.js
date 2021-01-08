@@ -6,6 +6,7 @@ const bsApiKey = 'S59ytkfj516WUG8NHeBvcBmRvCDSPKS8';
 function displayBSResults(responseJson) {
     $('.js-bs-list').empty();
     $('.js-bs-list').removeClass('hidden');
+    $('.js-book-view').addClass('hidden');
     console.log(responseJson);
     for (let i = 0; i < responseJson.results.books.length; i++) {
         $('.js-bs-list').append(`<li class="${i}">
