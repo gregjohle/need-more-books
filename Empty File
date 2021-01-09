@@ -1,5 +1,0 @@
-Tastedrive API Key
-397089-NeedMore-BSEJSNYL
-
-<label for="resultsNumber">Number of Results to Display</label>
-            <input type="number" name="resultsNumber" id="resultsNumber" max="25">

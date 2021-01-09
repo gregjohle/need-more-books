@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Need More Books</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css" type="text/css">
 </head>
 
@@ -84,8 +86,16 @@
         </div>
     </header>
     <main>
+        <div class="introduction">
+            <h2>Welcome to Need More Books</h2>
+            <p>This app will allow you to view the New York Times Best Seller Lists and read previews of these books to see if it's something you would enjoy reading.</p>
+            <p>Choose a list from the dropdown above, then click submit. If you see a book you like, click on the view button at the bottom.</p>
+            <p>Ready?</p>
+            <form class="begin">
+                <button type="submit" name="letsBegin" class="letsBegin">Let's Begin</button>
+            </form>
+        </div>
         <div class="js-book-view hidden">
-
             <div id="viewerCanvas" class="viewer"></div>
             <form class="js-hide-viewer">
                 <button type="submit" name="hide" class="hide">Close</button>

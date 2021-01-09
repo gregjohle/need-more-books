@@ -115,8 +115,16 @@ function handleCloseViewer() {
     })
 }
 
+function handleBegin() {
+    $('.introduction').submit('.letsBegin', function(event) {
+        event.preventDefault();
+        $('.introduction').addClass('hidden');
+    })
+}
+
 $(function() {
     handleListSubmit();
     handleViewSubmit();
     handleCloseViewer();
+    handleBegin();
 });
