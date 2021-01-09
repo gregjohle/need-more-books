@@ -10,7 +10,6 @@ function displayBSResults(responseJson) {
     $('.js-bs-list').empty();
     $('.js-bs-list').removeClass('hidden');
     $('.js-book-view').addClass('hidden');
-    console.log(responseJson);
     for (let i = 0; i < responseJson.results.books.length; i++) {
         $('.js-bs-list').append(`<li class="${i}">
         <h2 class="title">${responseJson.results.books[i].title}</h2>
@@ -86,7 +85,6 @@ function handleViewSubmit() {
         let isbnText = $(this).parent().siblings('h3.isbn').text();
         // Formats ISBN for viewer
         let bookIsbn = `ISBN:${isbnText}`
-        console.log(bookIsbn);
         initialize(bookIsbn);
         bookFound();
     });
