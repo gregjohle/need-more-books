@@ -2,6 +2,9 @@
 const bsSearchURL = 'https://api.nytimes.com/svc/books/v3/lists/current/';
 const bsApiKey = 'S59ytkfj516WUG8NHeBvcBmRvCDSPKS8';
 
+// Variable used to specify which book to view
+const bookIsbn = 'ISBN:0738531367';
+
 // Moves list fetch results into a list
 function displayBSResults(responseJson) {
     $('.js-bs-list').empty();
@@ -40,7 +43,7 @@ function showBookInfo() {
 
 // Fetch the specified list from the API
 function getBS(list) {
-    const listName = list + '.json' + '?api-key=' + bsApiKey;
+    const listName = `${list}.json?api-key=${bsApiKey}`;
     const url = bsSearchURL
 
     fetch(url + listName)
@@ -51,13 +54,11 @@ function getBS(list) {
             throw new Error(response.statusText);
         })
         .then(responseJson => displayBSResults(responseJson))
-        .catch(err => {
-            $('#js-error-message').text(`Something went wrong: ${err.message}`);
-        });
-};
 
-// Variable used to specify which book to view
-bookIsbn = 'ISBN:0738531367'
+    .catch(err => {
+        $('#js-error-message').text(`Something went wrong: ${err.message}`);
+    });
+};
 
 // Alerts if book not found by specific ISBN
 function alertNotFound() {
@@ -81,8 +82,10 @@ function initialize(bookIsbn) {
 // Initializes viewer for selected book
 function handleViewSubmit() {
     $('.js-bs-list').on('click', '.titleBtn', function(event) {
+        // assigns selected book ISBN to isbnText
         let isbnText = $(this).parent().siblings('h3.isbn').text();
-        bookIsbn = "ISBN:" + isbnText;
+        // Formats ISBN for viewer
+        let bookIsbn = `ISBN:${isbnText}`
         console.log(bookIsbn);
         initialize(bookIsbn);
         bookFound();
