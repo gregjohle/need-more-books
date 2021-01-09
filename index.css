@@ -1,4 +1,4 @@
-* {
+body {
     font-family: EB Garamond;
     background-color: black;
 }
@@ -17,7 +17,7 @@ select {
     border-radius: 5px;
     padding: .5em;
     font-weight: 700;
-    background-color: #black;
+    background-color: black;
     color: white;
 }
 
@@ -115,10 +115,11 @@ li button:hover {
     background-color: rgb(184, 184, 252);
 }
 
-.viewer {
+div.viewer {
     display: block;
     width: 100vw;
     height: 40em;
+    background-color: white;
 }
 
 .js-hide-viewer {

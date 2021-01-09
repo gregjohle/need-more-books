@@ -29,7 +29,7 @@ function hideBookInfo() {
     $('.js-bs-list').find('p').addClass('hidden');
     $('.js-bs-list').find('img').removeClass('largeImage').addClass('smallImage');
     $('.js-bs-list').addClass('lowerList');
-}
+};
 
 // restores book list to full height when viewer is closed.
 function showBookInfo() {
@@ -38,7 +38,7 @@ function showBookInfo() {
     $('.js-bs-list').find('p').removeClass('hidden');
     $('.js-bs-list').find('img').removeClass('smallImage').addClass('largeImage');
     $('.js-bs-list').removeClass('lowerList');
-}
+};
 
 // Fetch the specified list from the API
 function getBS(list) {
@@ -75,7 +75,7 @@ function bookFound() {
         hideBookInfo();
         $('.js-book-view').removeClass('hidden');
     };
-}
+};
 
 // Initializes viewer with ISBN
 function initialize(bookIsbn) {
@@ -101,6 +101,7 @@ google.books.load();
 function handleListSubmit() {
     $('.nytControls').submit('.listSubmit', function(event) {
         event.preventDefault();
+        hideIntro();
         $('.js-bs-list').removeClass('hidden');
         var listSel = $('#listSelect').val();
         getBS($('#listsSelect').val());
@@ -113,14 +114,20 @@ function handleCloseViewer() {
         $('.js-book-view').addClass('hidden');
         showBookInfo();
     })
-}
+};
 
+// This hides the intro Div
+function hideIntro() {
+    $('.introduction').addClass('hidden');
+};
+
+// This handles the "Let's Begin" button in the intro
 function handleBegin() {
     $('.introduction').submit('.letsBegin', function(event) {
         event.preventDefault();
-        $('.introduction').addClass('hidden');
+        hideIntro();
     })
-}
+};
 
 $(function() {
     handleListSubmit();
