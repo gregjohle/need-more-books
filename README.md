@@ -41,10 +41,10 @@ I do not get any monetary value from someone buying a book through this app.
 
 ## Technologies Used
 ---
--HTML
--CSS
--JavaScript
--JQuery
+- HTML
+- CSS
+- JavaScript
+- JQuery
 
 ## Demo
 ---
