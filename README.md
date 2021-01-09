@@ -25,7 +25,7 @@ It allows users to do this by providing a populated list of all the books on any
 
 The books can then be viewed through the Google Books Viewer API.
 
-##Function
+## Function
 
 The books API uses a query header to select a specific list, and a header for an API key.
 
