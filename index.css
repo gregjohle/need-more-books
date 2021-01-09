@@ -122,10 +122,6 @@ div.viewer {
     background-color: white;
 }
 
-.js-hide-viewer {
-    margin: 0 auto;
-}
-
 .js-book-viewer {
     display: flex;
     flex-direction: row;

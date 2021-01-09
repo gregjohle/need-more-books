@@ -28,7 +28,6 @@ function hideBookInfo() {
     $('.js-bs-list').find('h3.author').addClass('hidden');
     $('.js-bs-list').find('p').addClass('hidden');
     $('.js-bs-list').find('img').removeClass('largeImage').addClass('smallImage');
-    $('.js-bs-list').addClass('lowerList');
 };
 
 // restores book list to full height when viewer is closed.
@@ -37,7 +36,6 @@ function showBookInfo() {
     $('.js-bs-list').find('h3.author').removeClass('hidden');
     $('.js-bs-list').find('p').removeClass('hidden');
     $('.js-bs-list').find('img').removeClass('smallImage').addClass('largeImage');
-    $('.js-bs-list').removeClass('lowerList');
 };
 
 // Fetch the specified list from the API
@@ -61,8 +59,6 @@ function getBS(list) {
 // Variable used to specify which book to view
 bookIsbn = 'ISBN:0738531367'
 
-var bookNotFound = false
-
 // Alerts if book not found by specific ISBN
 function alertNotFound() {
     showBookInfo();
@@ -70,11 +66,10 @@ function alertNotFound() {
     alert("Could not locate that book on Google Books. Please try another book.");
 };
 
+// Shows viewer after a book is selected
 function bookFound() {
-    if (bookNotFound === false) {
-        hideBookInfo();
-        $('.js-book-view').removeClass('hidden');
-    };
+    hideBookInfo();
+    $('.js-book-view').removeClass('hidden');
 };
 
 // Initializes viewer with ISBN
@@ -108,6 +103,7 @@ function handleListSubmit() {
     })
 };
 
+// Allows the user to close the book viewer
 function handleCloseViewer() {
     $('.js-hide-viewer').submit('.hide', function(event) {
         event.preventDefault();
