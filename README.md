@@ -1,12 +1,12 @@
-#Need More Books
+# Need More Books
 ---
 An application that combines known resources to allow users to preview books quickly.
 
-##Motivation
+## Motivation
 ---
 I enjoy reading. My whole family loves reading. I wanted to create an app that will help people who love to read find new books that they would enjoy.
 
-##Screenshots
+## Screenshots
 --- 
 Intro
 ![Image](./images/screenshots/intro.png)
@@ -17,7 +17,7 @@ Results
 Viewer
 ![Image](./images/screenshots/viewer.png)
 
-##Summary
+## Summary
 ---
 This is an app to allow users the ability to read previews of popular books to see if they would want to read them.
 
@@ -39,17 +39,17 @@ The viewer API also provides links to find more information on a specific book, 
 
 I do not get any monetary value from someone buying a book through this app. 
 
-##Technologies Used
+## Technologies Used
 ---
 -HTML
 -CSS
 -JavaScript
 -JQuery
 
-##Demo
+## Demo
 ---
 The live app can be viewed [Here](https://gregjohle.github.io/need-more-books)
 
-##Authors
+## Authors
 ---
 Greg Johle - Full Stack Web Developer
