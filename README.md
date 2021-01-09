@@ -12,7 +12,7 @@ Intro
 ![Image](./images/screenshots/intro.png)
 
 Results
-![Image](.images/screenshots/results.png)
+![Image](./images/screenshots/results.png)
 
 Viewer
 ![Image](./images/screenshots/viewer.png)
